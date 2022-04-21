@@ -9,23 +9,23 @@ const promiseFieldList = jsonDataObj.promiseFieldList;
 const huboPromiseData = jsonDataObj.huboPromiseData;
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", function (_req, res) {
   res.render("index", { title: "Express" });
 });
 
-router.get("/hubolist", function (req, res) {
+router.get("/hubolist", function (_req, res) {
   res.status(200).json({ huboListData });
 });
 
-router.get("/huboinfo", function (req, res) {
+router.get("/huboinfo", function (_req, res) {
   res.status(200).json({ huboInfoData });
 });
 
-router.get("/field/list", function (req, res) {
+router.get("/field/list", function (_req, res) {
   res.status(200).json({ promiseFieldList });
 });
 
-router.get("/hubo/promise", function (req, res) {
+router.get("/hubo/promise", function (_req, res) {
   res.status(200).json({ huboPromiseData });
 });
 
